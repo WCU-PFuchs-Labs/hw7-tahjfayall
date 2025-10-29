@@ -1,7 +1,7 @@
 /**
  * Code Template Author: David G. Cooper
  * Purpose: A Binary Tree class for Arithmetic evaluation
- * Edit Date: 10/21/2025
+ * Edit Date: 10/26/2025
  * Editor: Tahj Fayall
  */
  import java.util.Random;
@@ -131,5 +131,34 @@ public class Node implements Cloneable {
       {
          return "(" + left.toString() + " " + operation.toString() + " " + right.toString() + ")";
       }
+    }
+    
+    public void traverse(Collector c)
+    {
+         c.collect(this);     //Visit node
+         if (left != null)
+         {
+            left.traverse(c);    //Left subtree
+         }
+         
+         if (right != null)
+         {
+            right.traverse(c);   //Right subtree
+         }
+    }
+    
+    public boolean isLeaf()
+    {
+         return operation instanceof Unop;
+    }
+    
+    public void swapLeft(Node trunk)
+    {
+         this.left = trunk.left;
+    }
+    
+    public void swapRight(Node trunk)
+    {
+      this.right = trunk.right;
     }
 }
