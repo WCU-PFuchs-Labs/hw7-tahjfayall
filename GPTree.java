@@ -1,6 +1,6 @@
 /**
 * Author: Tahj Fayall
-* Program: Divide
+* Program: GPTree
 * Date: 10/28/2025
 **/
 import java.util.ArrayList;

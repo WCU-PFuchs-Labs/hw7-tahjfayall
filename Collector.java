@@ -1,6 +1,6 @@
 /**
 * Author: Tahj Fayall
-* Program: Divide
+* Program: Collector
 * Date: 10/28/2025
 **/
 public interface Collector
